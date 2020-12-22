@@ -1,0 +1,13 @@
+<div class="container-login-register">
+
+<form action="/users/register" method="POST" class="form-login-register">
+    <h3>Registrate</h3>
+    <input type="text" name="name" placeholder="Nombre" required autofocus class="datos" value="{{name}}">
+    <input type="email" name="email" placeholder="Email" required class="datos" value="{{email}}">
+    <input type="password" name="password" placeholder="Contraseña" required class="datos" value="{{password}}">
+    <input type="password" name="confirm_password" placeholder="Confirmar contraseña" required class="datos" value="{{confirm_password}}">
+    <input type="submit" value="Continuar" class="submit-login-register" >
+</form>
+
+<h4 class="enlace-login-register">Ya tienes cuenta?? <a href="/users/signin">Inicia Sesion</a></h4>
+</div>
