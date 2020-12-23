@@ -7,13 +7,15 @@
 
 body {
   background-color: #fff;
+  position: relative;
+  height: 110vh;
 }
 
 /* Pagina de inicio */
 
 .container-index {
   width: 90%;
-  margin: auto;
+  margin: 20px auto;
   background-color: #eee;
   box-shadow: 3px 3px 3px #bbb;
   padding: 20px;
@@ -350,7 +352,7 @@ body {
 
 /* Footer */
 .footer {
-  position: relative;
+  position: absolute;
   left: 0;
   bottom: 0;
   right: 0;
