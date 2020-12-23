@@ -1,0 +1,9 @@
+<div class="container-form">
+    <h3> Editar nota <i class="fas fa-edit"></i></h3>
+    <form action="/notes/edit/{{_id}}?_method=PUT" method="POST" class="form-note">
+        <input type="hidden" name="_method" value="PUT">
+        <input type="text" name="title" required autofocus autocomplete="off"   placeholder="Titulo" class="input-note-t" value="{{title}}">
+        <textarea name="description" placeholder="Descripcion" class="input-note-d" required >{{description}}</textarea >
+        <input type="submit" value="Crear" class="input-sumbit-note">
+    </form>
+</div>

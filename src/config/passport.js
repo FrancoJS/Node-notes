@@ -17,7 +17,7 @@ passport.use(
         if (!match) {
           return done(null, false, { message: "Email o contraseña incorrectos" });
         } else {
-          done(null, user, { message: `Bienvenido ${user.name}` });
+          done(null, user, { message: `Bienvenido(a) ${user.name}` });
         }
       }
     }

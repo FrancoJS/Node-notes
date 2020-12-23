@@ -8,8 +8,13 @@
             <h4>{{title}} </h4>
             </div>
             <div class="note-icons">
-            <a href="" class="trash"><i class="fas fa-trash-alt"></i></a>
-            <a href="" class="pencil"><i class="fas fa-pencil-alt "></i></a>
+                <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" method="POST" class="trash">
+                        <i class="fas fa-trash-alt"></i>
+                        </button>
+                    <a href="/notes/edit/{{_id}}" class="pencil"><i class="fas fa-pencil-alt "></i></a>
+                </form>
             </div>
         </div>
     <div class="description">

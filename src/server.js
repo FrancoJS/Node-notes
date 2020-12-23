@@ -4,6 +4,7 @@ const exphbs = require("express-handlebars");
 const session = require("express-session");
 const flash = require("connect-flash");
 const passport = require("passport");
+const methodOverride = require("method-override");
 
 const app = express();
 require("./config/passport");
@@ -26,6 +27,7 @@ app.set("view engine", ".hbs");
 //Middlewares
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(methodOverride("_method"));
 app.use(
   session({
     secret: "mysecret",

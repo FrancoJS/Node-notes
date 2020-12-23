@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const { PORTAFOLIO_APP_HOST, PORTAFOLIO_APP_DATABASE } = process.env;
-const MONGODB_URL = `mongodb://${PORTAFOLIO_APP_HOST}/${PORTAFOLIO_APP_DATABASE}`;
+const MONGODB_URL = process.env.MONGODB_URL || `mongodb://${PORTAFOLIO_APP_HOST}/${PORTAFOLIO_APP_DATABASE}`;
 
 mongoose
   .connect(MONGODB_URL, {
