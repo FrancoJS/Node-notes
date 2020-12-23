@@ -1,0 +1,20 @@
+<div class="container-notes">
+    <h3>Notas <i class="fas fa-clipboard"></i></h3>
+    {{#each notes}}
+    <div></div>
+    <div class="note">
+        <div class="title">
+            <div class="title-h4">
+            <h4>{{title}} </h4>
+            </div>
+            <div class="note-icons">
+            <a href="" class="trash"><i class="fas fa-trash-alt"></i></a>
+            <a href="" class="pencil"><i class="fas fa-pencil-alt "></i></a>
+            </div>
+        </div>
+    <div class="description">
+        <p>{{description}}</p>
+    </div>
+    </div>
+    {{/each}}
+</div>

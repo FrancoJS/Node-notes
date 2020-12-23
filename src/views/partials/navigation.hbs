@@ -1,15 +1,28 @@
 
 <div class="panel-menu" id="panel-menu">
     <div class="sign-in-up">
-        <a href="/users/signin"><i class="far fa-user"></i> Acceder</i></a>
+        {{#if user}}
+        <a href="#"><i class="far fa-user"></i> Hola,
+        {{#each user}}
+        {{this.name}} 
+        {{/each}}
+        </a>
+        {{else}}
+        <a href="/users/signin"><i class="far fa-user"></i> Acceder</a>
+        {{/if}}
     </div>
     <nav class="nav-menu" class="is-active">
-        <a href="#">seccion 1</a>
-        <a href="#">seccion 2</a>
+        {{#if user}}
+        <a href="/notes/create"><i class="fas fa-book-open"></i> Crear nota</a>
+        <a href="/notes/all"><i class="fas fa-clipboard"></i> Todas las notas</a>
+        {{/if }}
+        <a href="/">Inicio</a>
+        <a href="#">seccion 4</a>
         <a href="#">seccion 3</a>
         <a href="#">seccion 4</a>
-        <a href="#">seccion 5</a>
-        <a href="#">seccion 6</a>
+        {{#if user}}
+        <a href="/users/logout"><i class="fas fa-sign-out-alt"></i> Cerrar Sesion</a>
+        {{/if}}
     </nav>
 </div>
 

@@ -7,6 +7,10 @@
 
 /* Menu de navegacion */
 
+body {
+  background-color: #fff;
+}
+
 .panel-menu {
   width: 70%;
   height: 100vh;
@@ -153,4 +157,142 @@
 
 .move {
   display: none;
+}
+
+/* Formulario crear nota */
+
+.container-form {
+  width: 90%;
+  margin: 30px auto;
+}
+
+.form-note {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px 0;
+  background-color: #eee;
+  box-shadow: 2px 2px 2px #bbb;
+}
+
+.container-form h3 {
+  font-size: 25px;
+  margin: 10px 0;
+  color: #222;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.input-note-t {
+  width: 80%;
+  height: 40px;
+  margin: 5px auto;
+  font-size: 18px;
+  outline: none;
+  padding: 5px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.input-note-t:focus {
+  outline: 1px solid #045f;
+}
+
+.input-note-d {
+  width: 80%;
+  height: 200px;
+  max-height: 50vh;
+  margin: 5px auto;
+  font-size: 18px;
+  outline: none;
+  padding: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  resize: vertical;
+}
+
+.input-note-d:focus {
+  outline: 1px solid #045f;
+}
+
+.input-sumbit-note {
+  width: 25%;
+  margin: auto;
+  font-size: 18px;
+  padding: 6px;
+  margin-top: 5px;
+  background-color: #045f;
+  color: #fff;
+  border: none;
+}
+
+.input-sumbit-note:active {
+  background-color: #fff;
+  color: #045f;
+}
+
+/* Vista de todas las notas */
+
+.container-notes {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 15px auto;
+}
+
+.container-notes h3 {
+  font-size: 25px;
+  color: #222;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.note {
+  margin: 15px 0;
+  box-shadow: 3px 3px 5px #aaa;
+}
+
+.title {
+  max-height: 50px;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 10px;
+  font-size: 18px;
+  color: #eee;
+}
+
+.title-h4 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+}
+
+.note-icons {
+  display: flex;
+}
+
+.note-icons a {
+  padding: 4px 7px;
+  border-radius: 10%;
+  text-decoration: none;
+  margin: 0 3px;
+}
+
+.note-icons .trash {
+  background-color: #c00;
+  color: #fff;
+}
+
+.note-icons .pencil {
+  background-color: #04c;
+  color: #fff;
+}
+
+.description {
+  padding: 10px;
+  height: 150px;
+  font-size: 16px;
+  background-color: #eee;
 }

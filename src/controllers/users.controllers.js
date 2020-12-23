@@ -1,4 +1,5 @@
 const usersCtrl = {};
+const passport = require("passport");
 const User = require("../models/User");
 
 //Register
@@ -83,30 +84,16 @@ usersCtrl.renderSigninForm = (req, res) => {
   res.render("users/signin.hbs");
 };
 
-usersCtrl.signIn = async (req, res) => {
-  const { email, password } = req.body;
-  const errors = [];
-  const user = await User.findOne({ email });
-  if (!user) {
-    errors.push({ message: "El usuario ingresado no esta registrado" });
-    return res.render("users/signin.hbs", {
-      errors,
-      email,
-    });
-  } else {
-    const match = await user.matchPassword(password);
-    if (!match) {
-      errors.push({ message: "El correo o la contraseña son incorrectos" });
-      return res.render("users/signin.hbs", {
-        errors,
-        email,
-      });
-    }
-  }
+usersCtrl.signIn = passport.authenticate("local", {
+  successRedirect: "/",
+  failureRedirect: "/users/signin",
+  successFlash: true,
+  failureFlash: true,
+});
 
-  req.flash("success_msg", "Inicio de sesion exitoso");
-
-  res.redirect("/");
+usersCtrl.logout = (req, res) => {
+  req.logout();
+  req.flash("success_msg", "Has cerrado sesion ");
+  res.redirect("/users/signin");
 };
-
 module.exports = usersCtrl;
