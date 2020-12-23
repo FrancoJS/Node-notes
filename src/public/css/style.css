@@ -119,13 +119,14 @@ body {
   color: #eee;
 }
 
-/* Login */
+/* Login y register */
 
 .container-login-register {
   width: 100%;
   max-height: 100vh;
   text-align: center;
   overflow: hidden;
+  z-index: 300;
 }
 
 .form-login-register {
@@ -353,6 +354,7 @@ body {
 /* Footer */
 .footer {
   position: absolute;
+  z-index: 250;
   bottom: 0;
   left: 0;
   right: 0;
