@@ -8,8 +8,16 @@
     "dev": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrancoJS/Node-portafolio.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FrancoJS/Node-portafolio/issues"
+  },
+  "homepage": "https://github.com/FrancoJS/Node-portafolio#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",
@@ -22,6 +30,7 @@
     "passport-local": "^1.0.0"
   },
   "devDependencies": {
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.6"
   }
 }
